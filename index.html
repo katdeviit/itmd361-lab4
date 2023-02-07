@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ITMD Lab 4 Form</title>
+    <style>
+      form input {
+        margin: 3px;
+      }
+      fieldset {
+        max-width: 500px;
+        margin: 5px;
+      }
+      #comments_field {
+        width: 500px;
+        height: 150px;
+      }
+      html {
+        background-color: #121212;
+        color: #e8e8e8;
+        font-family: "Helvetica", sans-serif;
+      }
+      #submit {
+        height: 4rem;
+        width: 8rem;
+      }
+      legend,
+      label {
+        font-weight: bold;
+      }
+      legend {
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php"
+      method="post"
+    >
+      <fieldset>
+        <legend>My Info</legend>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name_field" /><br />
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name_field" /><br />
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_field" /><br />
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email_field" /><br />
+        <fieldset>
+          <legend>Gender</legend>
+          <input type="radio" id="male" name="gender_field" value="Male" />
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender_field" value="Female" />
+          <label for="female">Female</label>
+          <input type="radio" id="other" name="gender_field" value="Other" />
+          <label for="other">Other</label><br />
+        </fieldset>
+        <label for="age">Age:</label>
+        <select name="age_field" id="age">
+          <option value="under 18">under 18</option>
+          <option value="18-24">18-24</option>
+          <option value="25-34">25-34</option>
+          <option value="35-44">35-44</option>
+          <option value="45-54">45-54</option>
+          <option value="55-64">55-64</option>
+          <option value="65 and over">65 and over</option></select
+        ><br />
+      </fieldset>
+      <fieldset>
+        <legend>My Availability</legend>
+        <fieldset>
+          <legend>Days Available</legend>
+          <input
+            type="checkbox"
+            id="sunday"
+            name="available_field[]"
+            value="Sunday"
+          />
+          <label for="sunday">Sunday</label><br />
+          <input
+            type="checkbox"
+            id="monday"
+            name="available_field[]"
+            value="Monday"
+          />
+          <label for="monday">Monday</label><br />
+          <input
+            type="checkbox"
+            id="tuesday"
+            name="available_field[]"
+            value="Tuesday"
+          />
+          <label for="tuesday">Tuesday</label><br />
+          <input
+            type="checkbox"
+            id="wednesday"
+            name="available_field[]"
+            value="Wednesday"
+          />
+          <label for="wednesday">Wednesday</label><br />
+          <input
+            type="checkbox"
+            id="thursday"
+            name="available_field[]"
+            value="Thursday"
+          />
+          <label for="thursday">Thursday</label><br />
+          <input
+            type="checkbox"
+            id="friday"
+            name="available_field[]"
+            value="Friday"
+          />
+          <label for="friday">Friday</label><br />
+          <input
+            type="checkbox"
+            id="saturday"
+            name="available_field[]"
+            value="Saturday"
+          />
+          <label for="saturday">Saturday</label><br />
+        </fieldset>
+        <label for="comments_field">Any additional comments?</label><br />
+        <textarea id="comments_field" name="comments_field"></textarea><br />
+        <input
+          type="hidden"
+          name="hidden_field"
+          value="[redacted for privacy], I really can't be putting all this out there on GitHub :("
+        />
+        <input id="submit" type="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
